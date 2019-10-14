@@ -1682,3 +1682,12 @@ hr {
 		margin-left: -3px;
 	  	position: relative;
 }
+
+/* Polygon clipping */
+.img-polygon{
+	clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+}
+
+.git-style{
+	list-style-image : url('../img/git-merge.png')!important;
+}
