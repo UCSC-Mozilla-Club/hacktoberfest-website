@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Hacktoberfest Monitor</title>
+    <meta name="description" content="Mozilla Club in University of Colombo School of Computing is a non profitable organisation dedicated to keeping the
+        power of the web in people's hands.">
+
+    <!-- Main CSS file -->
+    <link rel="stylesheet" href="css/production.css">
+    <!-- Animate CSS file -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Hover CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+    <!-- Web fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- favicon.ico. Place these in the root directory. -->
+    <link rel="shortcut icon" href="img/favicon.png">
+
+</head>
+
+<body>
+
+
+    <!-- Create outer border -->
+    <div class="page-border">
+        <div class="bg">
+            <!-- Header -->
+            <header class="align--center pt3 pb2 overlay-img" style="background-image: url('img/overlay-left.png'),url('img/overlay-right.png');background-position: bottom left, top right;
+                background-repeat: no-repeat;
+                min-height: 1040px;">
+                <div class="container">
+                    <h1 class="mb3 animated pulse hvr-buzz-out" title="SFD - UCSC"><img src="img/hflogo.svg"
+                            alt="HF Logo">
+                    </h1>
+                    <h3 style="color: #FFF922;">Check your progress here!</h3>
+                    <!-- <form class="form"> -->
+                        <input class="form-control mb1" placeholder="Enter your Github Username Here..." type="text"
+                            id="username-box" required>
+                        <button class="btn btn--default wow animated tada" type="submit"
+                            style="background-image: linear-gradient(to right,#ff4284,#ff01a9) !important; border:none"
+                            id="btn_check" onclick="getGithub();">Check Progress</button>
+                    <!-- </form> -->
+
+                </div>
+            </header>
+
+            <!-- Body -->
+            <main>
+                <div class="container">
+
+                    <!-- Controbutins Holder -->
+                    <section class="pt2 pb3" style="display: none;" id="cont-div">
+                        <h3 class="mb3" style="color:#FF00AA" id="welcome-title">Welcome User</h3>
+                        <div class="grid-row">
+                            <div class="grid-column span-one-second mt1">
+                                <img class="mb1 hvr hvr-wobble-skew img-polygon" id="profile-pic"
+                                    src="img/dummy_dp.jpg">
+                                    <h2 style="text-align: center; color: #FFF922" id="contributions">Controbutions : 7</h2>
+                            </div>
+                            <div class="grid-column span-one-second mt1">
+                                <h2 class="wow animated fadeInUp" style="color: #FFF922;">Your Pull Requests</h2>
+                                <div class="mb2 wow animated fadeInRight"
+                                    style="height: 3px; background-color: #FFF922;"></div>
+                                <ul class="git-style" id="progress-list">
+                                </ul>
+
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <!-- Footer -->
+                    <footer class="mt2 pb3 align--center">
+                        <img src="img/logo.png" alt="Hacktoberfest" style="width: 200px;">
+                        <p class="mt1 small text--white">&copy UCSC Mozilla Club @ 2019.</p>
+                    </footer>
+
+                </div>
+        </div>
+
+        <!-- Jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- Javascript -->
+        <script src="js/monitor.js"></script>
+        <!-- Initiate WOW js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+
+
+
+</body>
+
+</html>
