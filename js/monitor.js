@@ -7,8 +7,33 @@ function getGithub() {
     } else if (teamname == "") {
         alert("Invalid Team name");
     } else {
-        let urlbuilder = 'https://api.github.com/search/issues?q=created:>=2019-10-01+is:pr+is:public+author:' + username + "+label:\"" + teamname + "\"";
+        let urlbuilder = 'https://api.github.com/search/issues?q=created:>=2019-10-01+is:pr+is:public+author:' + username + '+label:\"' + teamname + '\"';
         
+        let userUrlBuilder = 'https://api.github.com/users/' + username;
+
+        // render user.error cause if there isn't any pr
+        $.ajax({
+            method: "GET",
+            url: userUrlBuilder,
+            dataType: "json",
+            cache: false,
+            success: function (response) {
+                
+                    if(response.message == "Not Found"){
+
+                        document.getElementById("welcome-title").innerHTML = "Error!";
+                    } else {
+
+                    //Welcome Text
+                    document.getElementById("welcome-title").innerHTML = "Welcome " + response.name;
+
+                    //Profile Picture
+                    document.getElementById("profile-pic").src = response.avatar_url;
+
+                }
+            }
+        });
+
         $.ajax({
             method: "GET",
             url: urlbuilder,
@@ -18,10 +43,10 @@ function getGithub() {
                 console.log(response.total_count);
 
                 //Welcome Text
-                document.getElementById("welcome-title").innerHTML = "Welcome " + response.items[0].user.login;
+                // document.getElementById("welcome-title").innerHTML = "Welcome " + response.items[0].user.login;
 
                 //Profile Picture
-                document.getElementById("profile-pic").src = response.items[0].user.avatar_url;
+                // document.getElementById("profile-pic").src = response.items[0].user.avatar_url;
 
                 // Contributions Count
                 document.getElementById("contributions").innerHTML = "Contributions for team " + teamname[0].toUpperCase() + teamname.slice(1).toLowerCase() + ": " + response.total_count;
