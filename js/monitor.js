@@ -4,7 +4,7 @@ function getGithub() {
     if(username == ""){
         alert("Invalid Username");
     } else {
-    let urlbuilder = 'https://api.github.com/search/issues?q=created:2019-10-10T00:00:00-12:00..2019-10-14T23:59:59-12:00+type:pr+is:public+author:' + username;
+    let urlbuilder = 'https://api.github.com/search/issues?q=created:>=2019-10-01+is:pr+is:public+author:' + username;
 
     $.ajax({
         method: "GET",
