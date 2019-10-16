@@ -7,7 +7,8 @@ function getGithub() {
     } else if (teamname == "") {
         alert("Invalid Team name");
     } else {
-        let urlbuilder = 'https://api.github.com/search/issues?q=created:>=2019-10-01+is:pr+is:public+author:' + username + '+label:\"' + teamname + '\"';
+        let urlbuilder = 'https://api.github.com/search/issues?q=created:>=2019-10-01+is:pr+is:public+author:' + username ;
+        // + '+label:\"' + teamname + '\"';
         
         let userUrlBuilder = 'https://api.github.com/users/' + username;
 
@@ -19,10 +20,7 @@ function getGithub() {
             cache: false,
             success: function (response) {
                 
-                    if(response.message == "Not Found"){
-
-                        document.getElementById("welcome-title").innerHTML = "Error!";
-                    } else {
+                    if(response.message != "Not Found"){
 
                     //Welcome Text
                     document.getElementById("welcome-title").innerHTML = "Welcome " + response.name;
@@ -49,16 +47,16 @@ function getGithub() {
                 // document.getElementById("profile-pic").src = response.items[0].user.avatar_url;
 
                 // Contributions Count
-                document.getElementById("contributions").innerHTML = "Contributions for team " + teamname[0].toUpperCase() + teamname.slice(1).toLowerCase() + ": " + response.total_count;
+                document.getElementById("contributions").innerHTML = "Contributions on team " + teamname[0].toUpperCase() + teamname.slice(1).toLowerCase() + ": " + response.total_count;
 
                 //CleanUP Div
                 document.getElementById("progress-list").innerHTML = "";
 
                 //PRs
-                for (let i = 0; i <= response.items.length; i++) {
+                for (let i = 0; i < response.items.length; i++) {
                     let element = document.getElementById("progress-list")
                     element.innerHTML = element.innerHTML +
-                        " <li>" +
+                        " <li class='mb2'>" +
                         "<div>" +
                         "<h4>" + response.items[i].repository_url.substr(29) + "</h4>" +
                         "<h6>" + response.items[i].title + "</h6>" +
