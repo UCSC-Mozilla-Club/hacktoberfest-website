@@ -7,8 +7,7 @@ function getGithub() {
     } else if (teamname == "") {
         alert("Invalid Team name");
     } else {
-        let urlbuilder = 'https://api.github.com/search/issues?q=created:>=2019-10-01+is:pr+is:public+author:' + username ;
-        // + '+label:\"' + teamname + '\"';
+        let urlbuilder = 'https://api.github.com/search/issues?q=created:>=2019-10-01+is:pr+is:public+author:' + username + '+label:\"' + teamname + '\"';
         
         let userUrlBuilder = 'https://api.github.com/users/' + username;
 
