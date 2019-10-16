@@ -1389,6 +1389,26 @@ hr {
 	margin-left: 4.4rem
 }
 
+.m5 {
+	margin: 5.5rem
+}
+
+.mt5 {
+	margin-top: 5.5rem
+}
+
+.mr5 {
+	margin-right: 5.5rem
+}
+
+.mb5 {
+	margin-bottom: 5.5rem
+}
+
+.ml5 {
+	margin-left: 5.5rem
+}
+
 .p-mb {
 	margin-bottom: .8rem
 }

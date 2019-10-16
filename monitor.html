@@ -44,13 +44,13 @@
                     </h1>
                     <h3 style="color: #FFF922;">Check your progress here!</h3>
                     <!-- <form class="form"> -->
-                        <input class="form-control mb1" placeholder="Enter your Github Username Here..." type="text"
-                            id="username-box" required>
-                        <input class="form-control mb1" placeholder="Enter your Team name Here..." type="text"
-                            id="teamname-box" required>
-                        <button class="btn btn--default wow animated tada" type="submit"
-                            style="background-image: linear-gradient(to right,#ff4284,#ff01a9) !important; border:none"
-                            id="btn_check" onclick="getGithub();">Check Progress</button>
+                    <input class="form-control mb1" placeholder="Enter your Github Username Here..." type="text"
+                        id="username-box" required>
+                    <input class="form-control mb1" placeholder="Enter your Team name Here..." type="text"
+                        id="teamname-box" required>
+                    <button class="btn btn--default wow animated tada" type="submit"
+                        style="background-image: linear-gradient(to right,#ff4284,#ff01a9) !important; border:none"
+                        id="btn_check" onclick="getGithub();">Check Progress</button>
                     <!-- </form> -->
 
                 </div>
@@ -67,7 +67,11 @@
                             <div class="grid-column span-one-second mt1">
                                 <img class="mb1 hvr hvr-wobble-skew img-polygon" id="profile-pic"
                                     src="img/dummy_dp.jpg">
-                                    <h2 style="text-align: center; color: #FFF922" id="contributions">Controbutions : 7</h2>
+                                <h3 style="text-align: center; color: #FF00AA" id="contributions-team-name">Team: team</h3>
+                                <h2 style="text-align: center; color: #FFF922" id="contributions-user">Your
+                                    Contributions : 0</h2>
+                                <h3 style="text-align: center; color: #FFF922" id="contributions-team">Team
+                                    Contributions : 0</h3>
                             </div>
                             <div class="grid-column span-one-second mt1">
                                 <h2 class="wow animated fadeInUp" style="color: #FFF922;">Your Pull Requests</h2>
@@ -75,6 +79,13 @@
                                     style="height: 3px; background-color: #FFF922;"></div>
                                 <ul class="git-style" id="progress-list">
                                 </ul>
+
+                                <h3 class="wow animated fadeInUp mt5" style="color: #FFF922;">Team Pull Requests</h3>
+                                <div class="mb2 wow animated fadeInRight"
+                                    style="height: 3px; background-color: #FFF922;"></div>
+                                <ul class="git-style" id="progress-list-team">
+                                </ul>
+
 
                             </div>
                         </div>
