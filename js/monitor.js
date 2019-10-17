@@ -9,9 +9,9 @@ function getGithub() {
     } else {
 
         //TODO: set time bound
-        let urlbuilder = 'https://api.github.com/search/issues?q=created:>=2019-10-01+is:pr+is:public+author:' + username + '+label:\"' + teamname + '\"';
+        let urlbuilder = 'https://api.github.com/search/issues?q=created:>=2019-10-18..2019-10-22+is:pr+is:public+author:' + username + '+label:\"' + teamname + '\"';
         
-        let teamUrlBuilder = 'https://api.github.com/search/issues?q=created:>=2019-10-01+is:pr+is:public+label:\"' + teamname + '\"';
+        let teamUrlBuilder = 'https://api.github.com/search/issues?q=created:>=2019-10-18..2019-10-22+is:pr+is:public+label:\"' + teamname + '\"';
         
         let userUrlBuilder = 'https://api.github.com/users/' + username;
 
