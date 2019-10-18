@@ -9,9 +9,9 @@
   <h3 align="center">Hacktoberfest 2019 Celebrations</h3>
 
   <p align="center">
-    Organized by Mozilla Campus Club of UCSC
-    <br />
+    Organized by UCSC Mozilla Club
     <a href="https://hacktoberfest19.ucscmozilla.com/"><strong>View Website »</strong></a>
+    <br />
     <br />
     <br />
     <img src="https://img.shields.io/badge/-HTML-brightgreen">
@@ -31,7 +31,7 @@
   <img src="https://hacktoberfest19.ucscmozilla.com/img/hflogo.svg" href="https://hacktoberfest.digitalocean.com" height="300">
 </p>
 
-Hacktoberfest is a month-long celebration of open source software run by DigitalOcean and DEV. Hacktoberfest is open to everyone in our global community. To participate, four pull requests must be submitted to public GitHub repositories. You can sign up anytime between October 1 and October 31.
+Hacktoberfest is a month-long celebration of open source software run by DigitalOcean and DEV. Hacktoberfest is open to everyone in our global community. To participate, four pull requests must be submitted to public GitHub repositories. You can sign up anytime between 1st of October and 31st of October.
 
 ### Participation rules
 To qualify for the official limited edition Hacktoberfest shirt, you must register and then make four pull requests (PRs) between October 1-31 (in any time zone). PRs can be made to any public repo on GitHub, not only the ones with issues labeled Hacktoberfest. If a maintainer reports your pull request as invalid or behavior not in line with the project’s code of conduct, you will be ineligible to participate. This year, the first 50,000 participants who successfully complete the challenge will earn a T-shirt. (Last year 46,088 earned a shirt!)
@@ -46,6 +46,7 @@ The Mozilla Club in University of Colombo School of Computing is a non profitabl
 For the first time in the history of the University of Colombo School of Computing, the Mozilla Club would be organizing an open-source competition for the internal undergraduates of the University of Colombo School of Computing.
 We would be providing the competitors with several open-source projects for which they can form teams and contribute to within the given timeline. All the teams have to contribute to these projects by creating pull requests for the issues. The five teams with the most number of pull requests will be selected for the final round.
 The final round is a creative round where the teams have to come up with an idea to upgrade any project on the list with new feature(s). Three teams with the best proposals will be the winners and would be awarded the following cash prizes.
+
 * First Place - LKR 10 000
 * Second Place - LKR 7 500
 * Third Place - LKR 5 000
