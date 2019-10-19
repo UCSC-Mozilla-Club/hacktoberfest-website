@@ -50,6 +50,9 @@ function getGithub() {
                 //CleanUP Div
                 document.getElementById("progress-list").innerHTML = "";
 
+                //Team Name
+                document.getElementById("contributions-team-name").innerHTML = "Team: " + teamname;
+
                 //PRs
                 for (let i = 0; i < response.items.length; i++) {
                     let element = document.getElementById("progress-list")
@@ -74,7 +77,7 @@ function getGithub() {
                 console.log(response.total_count);
 
                 //team name
-                document.getElementById("contributions-team-name").innerHTML = "Team: " + teamname[0].toUpperCase() + teamname.slice(1).toLowerCase();
+                //document.getElementById("contributions-team-name").innerHTML = "Team: " + teamname[0].toUpperCase() + teamname.slice(1).toLowerCase();
 
                 // Contributions Count
                 document.getElementById("contributions-team").innerHTML = "Team Contributions: " + response.total_count;
