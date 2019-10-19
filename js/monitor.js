@@ -9,7 +9,7 @@ function getGithub() {
     } else {
 
         //TODO: set time bound
-        let urlbuilder = 'https://api.github.com/search/issues?q=created:>=2019-10-18..2019-10-22+is:pr+is:public+author:' + username + '+label:\"' + teamname + '\"';
+        let urlbuilder = 'https://api.github.com/search/issues?q=created:2019-10-17T00:00:00-12:00..2019-10-22T23:59:59-12:00+type:pr+is:public+author:' + username;
         
         let teamUrlBuilder = 'https://api.github.com/search/issues?q=created:>=2019-10-18..2019-10-22+is:pr+is:public+label:\"' + teamname + '\"';
         
